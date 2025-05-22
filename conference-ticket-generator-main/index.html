@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+</head>
+<body>
+
+<div class="imgs">
+  <img class="logo" src="/assets/images/logo-full.svg" alt="">
+
+</div>
+  <!-- Form starts -->
+   
+  <div class="main">
+    <div class="text">
+      <h1>Your Journey to Coding Conf 
+        <br>2025 Starts Here!</h1>
+        <div class="subtext">
+      <h2>Secure your spot at next year's biggest coding conference.</h2>
+    </div>
+    
+
+
+  <form>
+    
+    <label class="upload_subtext">
+      Upload Avatar
+    </label> 
+    
+    <div class="upload">
+      <img src="/assets/images/icon-upload.svg" width="30" height="30" alt="Ícone">
+      Drag and drop or click to upload
+      
+    </div>
+    <div class="upload_text">
+      <img src="/assets/images/icon-info.svg" width="20" height="20" alt="Ícone">
+      Upload your photo (JPG or PNG, max size: 500KB).
+    </div>
+    <div class="inputs">
+      
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+      <label for="git">GitHub Username</label>
+      <input type="text" id="git" name="git" placeholder="@yourusername" required>
+      
+      <button class="button" type="submit">Generate Your Ticket</button>
+    </div>
+  </div>
+</form>
+<!-- Form ends -->
+
+  <script src="script.js"></script>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge"> Frontend Mentor</a>. 
+    Coded by <a href="#">Erick Vinicius</a>.
+  </footer>
+</body>
+</html>

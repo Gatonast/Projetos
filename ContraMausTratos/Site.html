@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozes pela Causa</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="icon" href="caminho/para/o/icone/favicon.ico" type="image/x-icon">
+
+   <!-- Meta Pixel Code -->
+
+</head>
+<body>
+
+    <div class="Banner">
+        <img src="Banner dio.png" alt="Banner">
+    </div>
+
+    <form id="form-assinatura">
+        <p>Assine o Baixo Assinado</p>
+        
+        <label for="nome">Nome Completo
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" required />
+        </label>
+        
+        <label for="contato">Contato WhatsApp
+            <input type="tel" id="contato" name="contato" placeholder="DDD + WhatsApp" required="" pattern="[0-9]{10,11}" oninput="this.value = this.value.replace(/\D/g, '')" maxlength="11">
+        </label>
+        
+        <label for="uf">UF (Estado)
+            <input type="text" id="uf" name="estado" placeholder="Estado (UF)" required />
+        </label>
+        
+        <label for="cidade">Cidade
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required />
+        </label>
+        
+        <div class="checkbox">
+            <input class="box" type="checkbox" name="termos" required>
+            <span>Eu aceito os 
+                <a href="termos-e-condicoes.html" target="_blank">Termos e Condições</a> e 
+                a <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a>.
+            </span>
+        </div>
+    
+        <button class="buttonform" type="submit">ASSINAR</button>
+    </form>
+
+    <div class="popup">
+        <img src="./agradecimentos.png" alt="Imagem Agradecimento">
+        <a class="share-button" href="https://wa.me/?text=Eu%20acabei%20de%20assinar%20um%20abaixo-assinado!%20Junte-se%20a%20nós:%20https://youtube.com" target="_blank">
+            <img src="./Whatsicon.png" alt="Ícone de WhatsApp">
+            <span>Compartilhar</span>
+        </a>    
+
+        <button class="popupbutton" type="button" onclick="closePopup()">Obrigado!!</button>
+    </div>
+
+    <script src="./popup.js"> </script>
+    
+    <h2 class="titulo">JUNTOS COM DIONÍSIO PROTETOR: UM MOVIMENTO PELA VIDA ANIMAL</h2>
+    <p>
+        Em um país onde a crueldade contra animais persiste, é essencial nos unirmos em prol da proteção e respeito a esses seres indefesos. A cada dia mais e mais casos de abandono, maus-tratos e abuso surgem, gerando uma realidade de sofrimento que não podemos aceitar.
+    </p>
+    <p>
+        Dionísio, um símbolo de resistência e defensor incansável da causa animal, nos inspira a lutar por uma mudança significativa. Este movimento visa dar voz aos animais que não podem se defender, através de medidas de conscientização e ações concretas que envolvem a comunidade, as autoridades e todos os cidadãos de boa vontade.
+    </p>
+    <p>
+        Através desta campanha, buscamos apoiar ações de proteção, como a punição severa aos infratores, a criação de políticas públicas para ajudar as ONGs e abrigos de animais, e a mobilização da sociedade para transformar a realidade de nossos companheiros de jornada.
+    </p>
+    <p>
+        Unir forças para a implementação de leis mais rigorosas e fiscalizações que realmente funcionem é um dos principais objetivos dessa luta. Além disso, pretendemos criar recursos sustentáveis para organizações independentes que ajudam animais vítimas de abusos, como também viabilizar o apoio à população de baixa renda, oferecendo clínicas veterinárias públicas e programas de alimentação e medicamentos para os animais.
+    </p>
+    <p>
+        O momento de agir é agora! Se você acredita que todos os seres merecem respeito e dignidade, sua assinatura pode ser a chave para um futuro melhor. Vamos juntos transformar a sociedade e erradicar os maus-tratos aos animais, dizendo sim à vida, à compaixão e ao respeito.
+    </p>
+
+    <img class="dionisio" src="dionisio.png" alt="Dionísio Protetor">
+
+    <script>
+        const form = document.getElementById('form-assinatura');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const nome = document.querySelector('input[name="nome"]').value;
+            const contato = document.querySelector('input[name="contato"]').value;
+            const estado = document.querySelector('input[name="estado"]').value;
+            const cidade = document.querySelector('input[name="cidade"]').value;
+            const termos = document.querySelector('input[name="termos"]').checked;
+
+            if (nome && contato && estado && cidade && termos) {
+                fbq('track', 'Lead');  // Evento personalizado para rastrear o preenchimento do formulário
+                history.pushState(null, null, '#baixo-assinado'); // Altere para a URL desejada
+                showPopup();
+            } else {
+                alert('Por favor, preencha todos os campos e aceite os termos!');
+            }
+        });
+
+        function showPopup() {
+            document.querySelector('.popup').style.display = 'grid';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

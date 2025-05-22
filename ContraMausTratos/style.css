@@ -1,0 +1,351 @@
+body, h2, p, label, button {
+    font-family: 'montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3d3d3d;
+    background-image: url(Fundo.png);
+    background-size: 100% auto;
+    padding: 40px;
+    background-repeat: no-repeat;
+}
+
+.Banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Banner img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50px;
+}
+
+.Banner:hover {
+    transform: scale(1.01);
+    filter: brightness(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 28rem;
+    background-color: rgba(139, 139, 139, 0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+label {
+    width: 100%;
+    color: #f1f1f1;
+    margin: 5px;
+}
+
+input {
+    width: 95%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+p {
+    font-size: 24px;
+    color: #f1f1f1;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p:hover {
+    color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.buttonform {
+    font-size: 2rem;
+    background-color: #07cc00;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.buttonform:hover,
+.buttonform:focus {
+    outline: none;
+    background: #058b00;
+    color: white;
+    transform: scale(1.05);
+}
+
+.titulo {
+    color: #FEB600;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.titulo:hover {
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+a {
+    color: #ffffff;
+    font-style: oblique;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #c4c4c4;
+}
+
+
+.checkbox {
+    display: flex
+    ;
+        align-items: center;
+        width: 105%;
+        font-weight: 400;
+        font-size: 14px;
+        color: #f1f1f1;
+        text-align: center;
+        margin-top: 10px;
+}
+.checkbox input[type="checkbox"] {
+    width: 20px; 
+    position: relative;
+    bottom: 3.25px;
+    accent-color: #07cc00; 
+    cursor: pointer;
+  
+}
+
+.dionisio{
+    width: 30%;
+}
+
+
+
+.popup {
+  
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000ad;
+    box-sizing: border-box;
+    align-content: center;
+    justify-items: center;
+    }
+    
+
+
+    .popup img[src="./agradecimentos.png"] {
+
+        width: 40%;
+        border-radius: 15px 15px 0 0px;
+        justify-self: center;
+        align-self: center; 
+        
+    }
+    
+    .popup img[src="./Whatsicon.png"] {
+        position: relative;
+
+    }
+
+    .popupbutton {
+        position: relative;
+        font-size: 2rem;
+        background-color: #2f7dbd;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        font-weight: bold;
+        width: 40%;
+        bottom: 25px;
+        border: none;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .popupbutton:hover,
+.popupbutton:focus {
+    outline: none;
+    background: #007b8b;
+    color: white;
+
+}
+    
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #149143;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 40%;
+    height: 80%;
+}
+
+.share-button img {
+    padding: 20px 5px 20px 0px;
+    max-width: 50px; 
+    height: auto; 
+}
+
+
+.share-button:hover {
+    background-color: #1ebe5b; 
+}
+
+
+/* Mobile P */
+@media (min-width: 100px) and (max-width: 399px) {
+    .popup img[src="./agradecimentos.png"] {
+        width: 80%;
+    }
+    .popupbutton {
+        width: 80%;
+    }
+    .checkbox {
+        display: inline;
+        margin-right: 10px; 
+        position: relative;
+    }
+    .share-button {
+        width: 90%;
+    }
+    body {
+        max-width: 100%;
+    }
+    .Banner img {
+        width: 100%; 
+    }
+    
+.dionisio{
+    width: 80%;
+}
+}
+
+/* Mobile M */
+@media (min-width: 400px) and (max-width: 599px) {
+    .popup img[src="./agradecimentos.png"] {
+        width: 70%;
+    }
+    .popupbutton {
+        position: relative;
+        width: 70%;
+    }
+    .checkbox {
+        margin-right: 10px;
+        position: relative;
+        display: flex;
+    }
+    .sharecontainer {
+        position: relative;
+        display: block;
+        left: 0;
+        bottom: 0;
+        width: 90%;
+    }
+    .share-button {
+        width: 70%;
+    }
+    .Banner img {
+        width: 100%;
+    }
+    
+.dionisio{
+    width: 80%;
+}
+}
+
+/* Mobile G */
+@media (min-width: 600px) and (max-width: 899px) {
+    .popup img[src="./agradecimentos.png"] {
+        width: 60%;
+    }
+    .popupbutton {
+        width: 60%;
+    }
+    .share-button {
+        width: 60%;
+    }
+    .Banner img {
+        width: 500px;
+    }
+    
+.dionisio{
+    width: 60%;
+}
+}
+
+/* Tablet */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .popup img[src="./agradecimentos.png"] {
+        width: 50%;
+    }
+    .popupbutton {
+        width: 50%;
+    }
+    .share-button {
+        width: 50%;
+    }
+    .Banner img {
+        width: 60%;
+    }
+    .dionisio{
+        width: 50%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) and (max-width: 1920px) {
+    .popup img[src="./agradecimentos.png"] {
+        width: 40%;
+    }
+    .popupbutton {
+        width: 40%;
+    }
+    .Banner img {
+        width: 40%;
+    }
+    
+.dionisio{
+    width: 40%;
+}
+}
